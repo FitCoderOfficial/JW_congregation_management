@@ -1,5 +1,8 @@
 # JW_congregation_management
 
+Preparing image
+
+
 
 ## Introduction
 
@@ -7,7 +10,7 @@ This is a secondary web page for JW members. I'm making the necessary functions.
 
 Template is written with `python3.8` and `Django4.0`
 
-![Default Home View](__screenshots/home.png?raw=true "Title")
+
 
 ### Main features
 

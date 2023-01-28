@@ -11,8 +11,8 @@ POSITION_CHOICES = [
 
 STATUS_CHOICES = [
     ('대기', '대기'),
-    ('approved', 'Approved'),
-    ('rejected', 'Rejected'),
+    ('승인', '승인'),
+    ('거절', '거절'),
 ]
 
 class JW_User(AbstractUser):
