@@ -7,22 +7,19 @@
     JW 군산 | JW Management Web
 </title>
 
-<!-- <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans : "'Noto Sans KR', sans-serif"
-          },
 
-        }
-      }
-    }
-  </script> -->
 
-<link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon"/>
-<link rel="stylesheet" type="text/css" href="{% static 'css/tailwind.css' %}" /> 
+<link rel="shortcut icon" href="{% static 'images/favicon.svg' %}" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+<script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark')
+    }
+</script>

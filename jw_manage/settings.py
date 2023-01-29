@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'crispy_forms',
     'crispy_tailwind',
+    'widget_tweaks',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACK = "tailwind"
@@ -122,7 +123,7 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 
 STATIC_ROOT = "static_root"
 MEDIA_URL = 'media/'
-MEDIA_ROOT = "media_root"
+MEDIA_ROOT = "media/"
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
