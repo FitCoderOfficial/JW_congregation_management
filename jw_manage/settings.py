@@ -37,7 +37,14 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django_filters',
     'rest_framework_simplejwt',
+    'crispy_forms',
+    'crispy_tailwind',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACK = "tailwind"
+
+CRISPY_TEMPLATE_PACK = "tailwind"
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -111,11 +118,12 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'public/static'
-STATICFILES_DIRS = [BASE_DIR]
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'public/media'
+STATIC_ROOT = "static_root"
+MEDIA_URL = 'media/'
+MEDIA_ROOT = "media_root"
+
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
@@ -123,9 +131,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 AUTH_USER_MODEL = 'accounts.JW_User'
-LOGIN_URL = '/accounts/login/'
+LOGIN_URL = 'accounts/login'
 LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = '/'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -148,5 +156,7 @@ ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 ACCOUNT_LOGOUT_ON_GET = True
+
+CRISPY_TEMPLATE_PACK = ''
 
 
