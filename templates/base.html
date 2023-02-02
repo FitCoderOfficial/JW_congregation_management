@@ -8,12 +8,8 @@
 <body>
     <div class="h-screen w-full">
         {% include "sidebar.html" %}
-        {% include "navbar.html" %} 
-
-        <div class="fixed left-64 bg-grey">
-        {% comment %} {% block content %}
-        {% endblock content %} {% endcomment %}
-        </div>
+        {% block content %}
+        {% endblock content %}
     </div>
 
     {% include "scripts.html" %} 

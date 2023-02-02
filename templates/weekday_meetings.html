@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>평일 집회 임명표</h1>
+  {% for ad in weekday_meetings %}
+    <div>
+      <h2>{{ ad.name }}</h2>
+      <img src="{{ ad.image.url }}" alt="{{ ad.name }}">
+      <p>Published: {{ ad.published }}</p>
+    </div>
+  {% endfor %}
+{% endblock %}
