@@ -5,3 +5,4 @@ from .models import *
 admin.site.register(CongregationAdvertisement)
 admin.site.register(WeekdayMeeting)
 admin.site.register(AppointmentCongregation)
+admin.site.register(CongregationGroup)

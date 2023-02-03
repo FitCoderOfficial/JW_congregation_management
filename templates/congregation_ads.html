@@ -3,7 +3,7 @@
 {% block content %}
   <div class="flex flex-col items-center">
     {% for ad in congregation_ads %}
-      <div class="w-full max-w-screen-lg rounded overflow-hidden shadow-lg my-5">
+      <div class="max-w-screen-lg rounded overflow-hidden shadow-lg my-5">
         <img class="w-full" src="{{ ad.image.url }}" alt="{{ ad.name }}">
       </div>
     {% endfor %}

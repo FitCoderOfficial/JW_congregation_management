@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>주말 집회 임명표</h1>
-  {% for ad in appointment_congregation %}
-    <div>
-      <h2>{{ ad.name }}</h2>
-      <img src="{{ ad.image.url }}" alt="{{ ad.name }}">
-      <p>Published: {{ ad.published }}</p>
-    </div>
-  {% endfor %}
+
+  <div class="flex flex-col items-center">
+    {% for ad in appointment_congregation %}
+      <div class="max-w-screen-lg rounded overflow-hidden shadow-lg my-5">
+        <img src="{{ ad.image.url }}" alt="{{ ad.name }}">
+      </div>
+    {% endfor %}
+  </div>
 {% endblock %}

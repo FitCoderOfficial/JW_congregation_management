@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <div class="flex flex-col items-center">
-  {% for ad in weekday_meetings %}
+  <div class="flex flex-col items-center pt-20">
+  {% for ad in congregation_group %}
     <div class="max-w-screen-lg rounded overflow-hidden shadow-lg my-5">
       <img src="{{ ad.image.url }}" alt="{{ ad.name }}">
     </div>
