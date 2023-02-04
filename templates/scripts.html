@@ -1,10 +1,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
 
 <script>
+let toggleButton = document.querySelector('.toggle-sidebar');
+let sidebar = document.querySelector('.sidebar');
+
+toggleButton.addEventListener('click', function() {
+  sidebar.classList.toggle('sidebar-open');
+});
+</script>
+
+<script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
+            
         
             colors: {
             primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a"}
@@ -61,3 +71,4 @@ themeToggleBtn.addEventListener('click', function() {
     
 });
 </script>
+
