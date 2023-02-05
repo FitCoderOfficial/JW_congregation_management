@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     #새로 추가한 앱
     "accounts",
     "noticeboard",
+    "subscriptions",
 
     # 설치한 라이브러리 앱
     'allauth',

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ magazine.title }}</h1>
+  <img src="{{ magazine.image.url }}" alt="{{ magazine.title }}">
+  <p>Quantity: {{ magazine.quantity }}</p>
+  <p>Availability: {% if magazine.available %}In stock{% else %}Out of stock{% endif %}</p>
+  <p><a href="{% url 'subscribe' magazine.pk %}">Subscribe to {{ magazine.title }}</a></p>
+{% endblock %}
