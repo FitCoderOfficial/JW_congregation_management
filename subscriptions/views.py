@@ -25,14 +25,17 @@ from django.views.generic import ListView, DetailView
 class MagazineListView(ListView):
     model = Magazine
     template_name = 'magazine_list.html'
+    context_object_name = 'magazine_list'
 
 class MagazineDetailView(DetailView):
     model = Magazine
     template_name = 'magazine_detail.html'
+    context_object_name = 'magazine_detail'
 
 class SubscriptionListView(ListView):
     model = Subscription
     template_name = 'subscription_list.html'
+    context_object_name = 'Subscription'
 
     def get_queryset(self):
         return Subscription.objects.filter(user=self.request.user)
