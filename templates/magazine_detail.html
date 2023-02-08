@@ -1,9 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>{{ magazine.title }}</h1>
-  <img src="{{ magazine.image.url }}" alt="{{ magazine.title }}">
-  <p>Quantity: {{ magazine.quantity }}</p>
-  <p>Availability: {% if magazine.available %}In stock{% else %}Out of stock{% endif %}</p>
-  <p><a href="{% url 'subscribe' magazine.pk %}">Subscribe to {{ magazine.title }}</a></p>
+  
+  {% comment %} <p><a href="{% url 'subscribe' magazine.pk %}">Subscribe to {{ magazine.title }}</a></p> {% endcomment %}
+
+
+<main class="pt-8 pb-16 lg:pt-16 lg:pb-24 h-screen bg-white dark:bg-gray-900">
+  <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
+      <div class="mx-auto w-full max-w-2xl flex flex-col items-center dark:text-gray-400">
+          <header class="mb-4 lg:mb-6 ">              
+              <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">{{ magazine_detail.name }}</h1>
+          </header>          
+            <img class="max-w-screen-lg rounded overflow-hidden shadow-lg my-5" src="{{ magazine_detail.image.url }}" alt="">
+          <h2 class="mb-4 text-2xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-3xl dark:text-white">수량 : {{ magazine_detail.quantity }}</h2>     
+      </div>
+  </div>
+</main>
+
+
+
 {% endblock %}
