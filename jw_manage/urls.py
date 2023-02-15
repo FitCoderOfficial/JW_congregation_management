@@ -10,6 +10,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('accounts.urls')),
     path('', include('noticeboard.urls')),
+    path('', include('display.urls')),
     path('magazines/', include('subscriptions.urls')),
 ]
 

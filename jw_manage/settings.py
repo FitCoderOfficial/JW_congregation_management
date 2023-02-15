@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     "accounts",
     "noticeboard",
     "subscriptions",
+    "display",
 
     # 설치한 라이브러리 앱
     'allauth',
