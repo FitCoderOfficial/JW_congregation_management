@@ -5,5 +5,5 @@ from .views import *
 app_name = 'display'
 
 urlpatterns = [
-    path('reserve/', reserve, name='reserve'),
+    path('reserve/', index, name='reserve'),
 ]
