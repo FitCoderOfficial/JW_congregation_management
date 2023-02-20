@@ -13,40 +13,41 @@ def index(request):
     return render(request,'calender.html',context)
 
 def all_events(request):                                                                                                 
-    all_events = Reservation.objects.all()                                                                                    
+    all_events = Reservation.objects.all()                                                                 
     out = []                                                                                                             
     for event in all_events:                                                                                             
-        out.append({                                                                                                     
-            'user': event.username,                                                                                              
-            'date': event.start.strftime("%m/%d/%Y"),                                                  
+        out.append({  
+            'title': event.user.username,
+            'user': event.user.username,                                                            
+            'date': event.date.strftime('%Y-%m-%d'),                                           
         })                                                                                                               
                                                                                                                       
     return JsonResponse(out, safe=False) 
 
-def add_event(request):
-    date = request.GET.get("date", None)
-    username = request.GET.get("username", None)
-    event = Reservation(user=str(username), date=date)
-    event.save()
-    data = {}
-    return JsonResponse(data)
+# def add_event(request):
+#     date = request.GET.get("date", None)
+#     username = request.GET.get("username", None)
+#     event = Reservation(user=str(username), date=date)
+#     event.save()
+#     data = {}
+#     return JsonResponse(data)  
 
-def update(request):
-    date = request.GET.get("date", None)
-    username = request.GET.get("username", None)
-    event = Reservation.objects.get(username=username)
-    event.username = username
-    event.date = date
-    event.save()
-    data = {}
-    return JsonResponse(data)
+# def update(request):
+#     date = request.GET.get("date", None)
+#     username = request.GET.get("username", None)
+#     event = Reservation.objects.get(username=username)
+#     event.username = username
+#     event.date = date
+#     event.save()
+#     data = {}
+#     return JsonResponse(data)
  
-def remove(request):
-    username = request.GET.get("username", None)
-    event = Reservation.objects.get(username=username)
-    event.delete()
-    data = {}
-    return JsonResponse(data)
+# def remove(request):
+#     username = request.GET.get("username", None)
+#     event = Reservation.objects.get(username=username)
+#     event.delete()
+#     data = {}
+#     return JsonResponse(data)
 
 
 # @login_required
