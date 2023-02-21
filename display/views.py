@@ -24,13 +24,14 @@ def all_events(request):
                                                                                                                       
     return JsonResponse(out, safe=False) 
 
-# def add_event(request):
-#     date = request.GET.get("date", None)
-#     username = request.GET.get("username", None)
-#     event = Reservation(user=str(username), date=date)
-#     event.save()
-#     data = {}
-#     return JsonResponse(data)  
+def add_event(request):
+    date = request.GET.get("date", None)
+    username = request.GET.get("username", None)
+    event = Reservation(user=str(username), date=date)
+    event.save()
+    data = {}
+    return JsonResponse(data)  
+
 
 # def update(request):
 #     date = request.GET.get("date", None)
